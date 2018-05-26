@@ -30,7 +30,7 @@ public class Calculator {
 			return result;
 		}else{
 			
-			for(int q = d1.getMonth() + 1; q < d2.getMonth() - 1; q++){
+			for(int q = d1.getMonth() + 1; q < d2.getMonth() - 2; q++){
 				result += d1.getallDaysinMonth(q);
 			}
 			System.out.println(result);

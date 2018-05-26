@@ -29,11 +29,7 @@ public class Calculator {
 			}
 			return result;
 		}else{
-			
-			for(int q = d1.getMonth() + 1; q < d2.getMonth() - 1; q++){
-				result += d1.getallDaysinMonth(q);
-			}
-			System.out.println(result);
+			//TODO: calculate days in months exclusive if same year
 			return result;
 		}	
 	}
@@ -44,15 +40,15 @@ public class Calculator {
 		//check if same month
 		if(d1.getMonth() == d2.getMonth()){
 			return d2.getDay() - d1.getDay() - 1;
-		}else{
-			return d1.getDaysinMonth() - d1.getDay() + d2.getDay() - 1;
 		}
+		
+		return d1.getDaysinMonth() - d1.getDay() + d2.getDay() - 1;
 	}
 	
 	
 	
 	public static void main(String[] args) {
-		//input 04/07/1984 - 25/12/1984
+		//input 02/06/2011 - 22/07/2013: 50
 		MyDate date1 = new MyDate(args[0]);
 		MyDate date2 = new MyDate(args[2]);
 		int totaldays = daysinYears(date1.getYear(), date2.getYear());

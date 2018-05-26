@@ -29,11 +29,9 @@ public class Calculator {
 			}
 			return result;
 		}else{
-			
-			for(int q = d1.getMonth() + 1; q < d2.getMonth() - 1; q++){
+			for(int q = d1.getMonth(); q < d2.getMonth() - 1; q++){
 				result += d1.getallDaysinMonth(q);
 			}
-			System.out.println(result);
 			return result;
 		}	
 	}
@@ -52,7 +50,7 @@ public class Calculator {
 	
 	
 	public static void main(String[] args) {
-		//input 04/07/1984 - 25/12/1984
+		//input 02/06/2011 - 22/07/2013: 50
 		MyDate date1 = new MyDate(args[0]);
 		MyDate date2 = new MyDate(args[2]);
 		int totaldays = daysinYears(date1.getYear(), date2.getYear());
