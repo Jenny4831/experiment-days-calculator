@@ -1,0 +1,34 @@
+package daysCalculator;
+
+public class Calculator {
+	//calculates how many days in a year.
+	public int daysinYears(int y1, int y2){
+		//TODO
+		//Calculate days in year.
+		//check if same year / leap year
+		return 0 ;
+	}
+	//calculates how many days in a month.
+	public int daysinMonths(int y1, int y2){
+		//TODO
+		//calculate days in month
+		//check same month
+		//check leap year
+		return 0 ;
+	}
+	public int daysWithinMonth(int D1, int D2){
+		return 0 ;
+	}
+	
+	
+	public static void main(String[] args) {
+		//input 02/06/1983 - 22/06/1983: 19 days
+		int sum;
+		MyDate date1 = new MyDate(args[0]);
+		MyDate date2 = new MyDate(args[2]);
+		System.out.println(date1.getYear());
+		
+	}
+
+}
+
