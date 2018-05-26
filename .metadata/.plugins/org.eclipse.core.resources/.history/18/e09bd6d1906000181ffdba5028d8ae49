@@ -29,9 +29,16 @@ public class Calculator {
 			}
 			return result;
 		}else{
-			//TODO: calculate days in months exclusive if same year
-			return result;
-		}	
+			//if same year
+			if(d2.getYear() == d1.getYear()){
+				for(int i = d1.getMonth() + 1; i < d2.getMonth() + 1; i++){
+					result += d1.getallDaysinMonth(i);
+				}
+				return result;
+			}
+		}
+		return 0;
+		
 	}
 	
 	//calculates how many days in start date month and end date month.

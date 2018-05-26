@@ -28,10 +28,9 @@ public class Calculator {
 				result += d2.getallDaysinMonth(j);
 			}
 			return result;
-		}else{
-			//TODO: calculate days in months exclusive if same year
-			return result;
-		}	
+		}
+		return 0;
+		
 	}
 	
 	//calculates how many days in start date month and end date month.
@@ -53,7 +52,7 @@ public class Calculator {
 		MyDate date2 = new MyDate(args[2]);
 		int totaldays = daysinYears(date1.getYear(), date2.getYear());
 		int monthDays = dayswithinMonths(date1,date2);
-		System.out.println(daysinYears(date1.getYear(), date2.getYear()) + daysinMonths(date1, date2) + dayswithinMonths(date1,date2));
+		System.out.println(daysinMonths(date1, date2));
 		
 	}
 

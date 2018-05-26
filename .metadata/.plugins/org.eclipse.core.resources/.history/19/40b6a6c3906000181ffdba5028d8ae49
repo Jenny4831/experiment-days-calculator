@@ -28,10 +28,9 @@ public class Calculator {
 				result += d2.getallDaysinMonth(j);
 			}
 			return result;
-		}else{
-			//TODO: calculate days in months exclusive if same year
-			return result;
-		}	
+		}
+		return 0;
+		
 	}
 	
 	//calculates how many days in start date month and end date month.

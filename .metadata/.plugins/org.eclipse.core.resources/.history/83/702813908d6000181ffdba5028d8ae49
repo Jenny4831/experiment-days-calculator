@@ -41,7 +41,7 @@ public class MyDate {
 		if(isLeap){
 			months[1] = 29;
 		}
-		return months[m];
+		return months[month];
 	}
 	
 	
