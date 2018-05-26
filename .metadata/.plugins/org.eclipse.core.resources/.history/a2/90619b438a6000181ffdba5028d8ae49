@@ -18,7 +18,13 @@ public class Calculator {
 	
 	//calculates how many days left in start date year's month and end date year's month.
 	public static int daysinMonths(MyDate d1, MyDate d2){
-		return 0;
+		
+		//check if same month
+		if(d1.getMonth() == d2.getMonth()){
+			return d2.getDay() - d1.getDay() - 1;
+		}
+		int result = d1.getDaysinMonth() - d1.getDay() + d2.getDay() - 1;
+		return result;
 	}
 	
 	//calculates how many days in start date month and end date month.
@@ -39,8 +45,8 @@ public class Calculator {
 		MyDate date1 = new MyDate(args[0]);
 		MyDate date2 = new MyDate(args[2]);
 		int totaldays = daysinYears(date1.getYear(), date2.getYear());
-		int monthDays = dayswithinMonths(date1,date2);
-		
+		int monthDays = daysinMonths(date1,date2);
+		System.out.println(totaldays);
 	}
 
 }

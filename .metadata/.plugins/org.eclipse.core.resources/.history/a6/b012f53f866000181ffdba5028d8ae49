@@ -1,0 +1,46 @@
+package daysCalculator;
+
+public class Calculator {
+		
+	public int daysinYears(int y1, int y2){
+		//TODO
+		//Calculate days in year exclusive.
+		//check if leap year
+		if(y1 == y2){
+			return 0;
+		}
+		int years = y2 -y1;
+		int leap = 0;
+		for(int i = y1+1; i < y2-1; i++){
+			if(y1 % 4 == 0){
+				leap++;
+			}
+		}
+		return 0; 
+	}
+	//calculates how many days in a month.
+	public static int daysinMonths(MyDate d1, MyDate d2){
+		int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		if(d1.getMonth() == d2.getMonth()){
+			return d2.getDay() - d1.getDay() - 1;
+		}
+		if(d1.isLeap){
+			months[1] = 29;
+		}
+		int result = months[d1.getMonth()] - d1.getDay() + d2.getDay() - 1;
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		//input 02/06/1983 - 22/07/1983: 28 - 2 + 22 -1 days
+		MyDate date1 = new MyDate(args[0]);
+		MyDate date2 = new MyDate(args[2]);
+		int totaldays;
+		int monthDays = daysinMonths(date1,date2);
+		System.out.println(monthDays);
+		System.out.println(28 - 2 + 22 - 1);
+		
+	}
+
+}
+

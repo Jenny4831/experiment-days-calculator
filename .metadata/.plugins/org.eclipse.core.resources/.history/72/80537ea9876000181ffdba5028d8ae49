@@ -23,11 +23,7 @@ public class MyDate {
 	public int getMonth() {
 		return month;
 	}
-	
-	public int getDay() {
-		return day;
-	}
-	
+
 	public int getDaysinMonth(){
 		int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		if(isLeap){
@@ -35,8 +31,10 @@ public class MyDate {
 		}
 		return months[month];
 	}
-	
-	
-	
+	public int getDay() {
+		return day;
+	}
+
+
 	
 }

@@ -8,6 +8,6 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="daysCalculator.Calculator"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="02/06/1983 - 22/06/1983"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="02/06/2010 - 22/06/2012"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="daysCalculator"/>
 </launchConfiguration>
