@@ -8,13 +8,12 @@ public class MyDate {
 	
 	public MyDate(String date){
 		year = Integer.parseInt(date.substring(date.length() - 4));
-		month = Integer.parseInt(date.substring(3, 5)) - 1;
+		month = Integer.parseInt(date.substring(3, 5)) - 1; 
 		day = Integer.parseInt(date.substring(0, 2));
 		if(year % 4 == 0){
 			isLeap  = true;
 		}
 	}
-	
 	
 	public int getYear(){
 		return year;
@@ -43,7 +42,4 @@ public class MyDate {
 		}
 		return months[m];
 	}
-	
-	
-	
 }
