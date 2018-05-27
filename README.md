@@ -8,7 +8,13 @@ The scientist have given the following test cases:
 1. 02/06/1983 - 22/06/1983: 19 days
 2. 04/07/1984 - 25/12/1984: 173 days
 3. 03/01/1989 - 03/08/1983: 1979 days
+
 Hence, it is assumed that the program will sort the dates, to indicate which one is start date and end date.
+
+The program is built with three main methods, each of them focusing on days in years,days in months and days within given months respectively.
+The reason for this approach is for easier testing. Breaking the whole logic down in smaller parts understanding the constraints and finding the source of failing test cases. 
+
+### Build with ###
 To complete this project I have used Eclipse neon3 and java version "1.8.0_101".
 The test cases given are to test the methods of the main class.
 
