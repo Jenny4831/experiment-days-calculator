@@ -1,18 +1,6 @@
 public class Calculator {
 
 	/**
-	 * Checks if inputs are valid dates 01/01/1901 and 31/12/2999.
-	 * @param  d1 the start date
-	 * @param  d2 the end date
-	 * @return boolean true if date is valid
-	 */	
-	public static boolean checkValidDate(MyDate d1, MyDate d2){
-		if(d1.getYear() > 1900 && d2.getYear() < 3000){
-			return true;
-		}
-		return false;
-	}
-	/**
 	 * Calculates amount of days in the years within two dates, excluding
 	 * given years
 	 * @param  y1 the start year
@@ -102,10 +90,7 @@ public class Calculator {
 				date1 = date2;
 				date2 = temp;
 			}
-			if(!checkValidDate(date1, date2)){
-				System.out.println("Please enter valid dates within: 01/01/1901 - 31/12/2999.");
-				return;
-			}
+			
 			System.out.println(daysinYears(date1.getYear(), date2.getYear()) + daysinMonths(date1, date2) + dayswithinMonths(date1,date2) - 1);
 			return;
 			

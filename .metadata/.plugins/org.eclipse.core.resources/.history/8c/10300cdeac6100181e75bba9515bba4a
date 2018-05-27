@@ -1,11 +1,5 @@
 public class Calculator {
 
-	/**
-	 * Checks if inputs are valid dates 01/01/1901 and 31/12/2999.
-	 * @param  d1 the start date
-	 * @param  d2 the end date
-	 * @return boolean true if date is valid
-	 */	
 	public static boolean checkValidDate(MyDate d1, MyDate d2){
 		if(d1.getYear() > 1900 && d2.getYear() < 3000){
 			return true;
