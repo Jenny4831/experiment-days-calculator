@@ -1,7 +1,6 @@
 package daysCalculator;
 
 public class Calculator {
-	
 		
 	public static int daysinYears(int y1, int y2){
 		if(y1 == y2){
@@ -28,8 +27,8 @@ public class Calculator {
 			for(int j = 0; j < d2.getMonth(); j++){
 				result += d2.getallDaysinMonth(j);
 			}
-			
 			return result;
+			
 		}else{
 			for(int q = d1.getMonth() + 1; q < d2.getMonth(); q++){
 				result += d1.getallDaysinMonth(q);
@@ -52,26 +51,28 @@ public class Calculator {
 	
 	
 	public static void main(String[] args) {
-		
-		MyDate date1 = new MyDate(args[0]);
-		MyDate date2 = new MyDate(args[2]);
-		
-		//check dates order and sawp if order is wrong
-		MyDate temp = date1;
-		if(date1.getYear() > date2.getYear()){
-			date1 = date2;
-			date2 = temp;
-		}else if(date1.getYear() == date2.getYear() && date1.getMonth() > date2.getMonth()){
-			date1 = date2;
-			date2 = temp;
-		}else if(date1.getYear() == date2.getYear() && date1.getMonth() == date2.getMonth() && date1.getDay() > date2.getDay()){
-			date1 = date2;
-			date2 = temp;
+		if(args.length == 0){
+			System.out.println("No input is inserted");
 		}
-
-		System.out.println(daysinYears(date1.getYear(), date2.getYear()) + daysinMonths(date1, date2) + dayswithinMonths(date1,date2));
-		
+		try{
+			MyDate date1 = new MyDate(args[0]);
+			MyDate date2 = new MyDate(args[2]);
+			MyDate temp = date1;
+			if(date1.getYear() > date2.getYear()){
+				date1 = date2;
+				date2 = temp;
+			}else if(date1.getYear() == date2.getYear() && date1.getMonth() > date2.getMonth()){
+				date1 = date2;
+				date2 = temp;
+			}else if(date1.getYear() == date2.getYear() && date1.getMonth() == date2.getMonth() && date1.getDay() > date2.getDay()){
+				date1 = date2;
+				date2 = temp;
+			}
+			System.out.println(daysinYears(date1.getYear(), date2.getYear()) + daysinMonths(date1, date2) + dayswithinMonths(date1,date2));
+			return;
+		}catch (Exception e){
+			System.out.println("Please insert in the following format: DD/MM/YYYY - DD/MM/YYYY");
+			return;
+		}
 	}
-
 }
-

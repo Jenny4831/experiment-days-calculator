@@ -1,0 +1,19 @@
+package daysCalculator;
+
+import static org.junit.Assert.*;
+
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Test;
+
+public class testDaysCalculator {
+
+	@Test
+	public void testMainSameYearMonth() {
+		MyDate date1 = new MyDate("02/06/1983");
+		MyDate date2 = new MyDate("22/06/1983");
+		fail("Not yet implemented");
+	}
+
+}
