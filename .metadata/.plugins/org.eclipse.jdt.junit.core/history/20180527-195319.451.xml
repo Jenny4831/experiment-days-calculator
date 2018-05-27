@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testDaysCalculator" project="daysCalculator" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="daysCalculator.testDaysCalculator" time="0.0">
+    <testcase name="testMainSameYearMonth" classname="daysCalculator.testDaysCalculator" time="0.0"/>
+    <testcase name="testMainDifferentYear" classname="daysCalculator.testDaysCalculator" time="0.0"/>
+    <testcase name="testMainSameYear" classname="daysCalculator.testDaysCalculator" time="0.0"/>
+  </testsuite>
+</testrun>
