@@ -29,10 +29,19 @@ public class MyDate {
 	public int getDay() {
 		return day;
 	}
-	
+ /**
+  * Searches for the days in this month
+  * @return amount of days of this month
+  */
+	public int getDaysinMonth(){
+		int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		if(isLeap){
+			months[1] = 29;
+		}
+		return months[month];
+	}
 	 /**
-	  * Searches for the days in given month
-	  * @param m month
+	  * Searches for the days in this month
 	  * @return amount of days of this month
 	  */
 	public int getallDaysinMonth(int m){
