@@ -91,7 +91,7 @@ public class Calculator {
 			MyDate date1 = new MyDate(args[0]);
 			MyDate date2 = new MyDate(args[2]);
 			MyDate temp = date1;
-			
+			//sorts the dates
 			if(date1.getYear() > date2.getYear()){
 				date1 = date2;
 				date2 = temp;
